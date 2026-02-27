@@ -2,10 +2,17 @@ import streamlit as st
 import requests
 import json
 
-st.title("我的 AI 助手 ")
+st.title("我的跨界 AI 助手 🏗️➡️💻 (记忆进化版)")
 
 # 1. 准备秘钥
-API_KEY = ""
+import os  # 新增这一行，用来读取系统环境
+
+# 优先从 Streamlit 的 Secrets 里取钥匙
+if "API_KEY" in st.secrets:
+    API_KEY = st.secrets["API_KEY"]
+else:
+    # 如果云端没设，就用你本地写的（本地测试用）
+    API_KEY = "这里可以填你本地测试用的Key"
 URL = "https://api.deepseek.com/chat/completions"
 
 # 2. 建立大脑记忆区 (专属储物柜)
@@ -55,6 +62,4 @@ if user_input:
                 # 同样关键：把 AI 刚说的话，也记在小本本上存进柜子
                 st.session_state.messages.append({"role": "assistant", "content": ai_reply})
             else:
-
                 st.error("网络开小差了，错误代码：" + str(response.status_code))
-
