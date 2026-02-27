@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-st.title("我的跨界 AI 助手 🏗️➡️💻 (记忆进化版)")
+st.title("我的 AI 助手 ")
 
 # 1. 准备秘钥
 API_KEY = ""
@@ -57,3 +57,4 @@ if user_input:
             else:
 
                 st.error("网络开小差了，错误代码：" + str(response.status_code))
+
