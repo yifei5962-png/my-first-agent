@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-st.title("我的跨界 AI 助手 🏗️➡️💻 (记忆进化版)")
+st.title("我的 AI 助手 ")
 
 # 1. 准备秘钥
 import os  # 新增这一行，用来读取系统环境
@@ -65,3 +65,4 @@ if user_input:
                 st.session_state.messages.append({"role": "assistant", "content": ai_reply})
             else:
                 st.error("网络开小差了，错误代码：" + str(response.status_code))
+
