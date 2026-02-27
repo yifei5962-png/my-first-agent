@@ -5,7 +5,7 @@ import json
 st.title("我的跨界 AI 助手 🏗️➡️💻 (记忆进化版)")
 
 # 1. 准备秘钥
-API_KEY = "sk-e5ce725baa524a1598758012e0745821"
+API_KEY = ""
 URL = "https://api.deepseek.com/chat/completions"
 
 # 2. 建立大脑记忆区 (专属储物柜)
@@ -55,4 +55,5 @@ if user_input:
                 # 同样关键：把 AI 刚说的话，也记在小本本上存进柜子
                 st.session_state.messages.append({"role": "assistant", "content": ai_reply})
             else:
+
                 st.error("网络开小差了，错误代码：" + str(response.status_code))
