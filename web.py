@@ -3,7 +3,7 @@ import requests
 
 # --- 核心配置：这是你实验室电脑的公网接头地址 ---
 # 确保后缀和你 n8n Webhook 节点里设置的 Path 一致
-N8N_WEBHOOK_URL = "https://45434ea8.r2.cpolar.top/webhook/zdu-paper-query"
+N8N_WEBHOOK_URL = "https://348feaa2.r2.cpolar.top/webhook/zdu-paper-query"
 
 st.set_page_config(page_title="郑大土木学术 AI", page_icon="🏗️")
 st.title("🏗️ 郑大土木学术 AI 助手")
@@ -56,4 +56,5 @@ if user_input:
                     st.error(f"n8n 响应异常，错误码：{response.status_code}")
             except Exception as e:
                 st.error("连接失败！请确认实验室电脑上的 cpolar 窗口是否保持开启。")
+
 
