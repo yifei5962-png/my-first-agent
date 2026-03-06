@@ -6,7 +6,7 @@ import requests
 N8N_WEBHOOK_URL = "https://152ce7c5.r8.vip.cpolar.cn/webhook/zdu-paper-query"
 
 st.set_page_config(page_title="学术 AI 助手", page_icon="🏗️")
-st.title("🏗️ 郑大土木学术 AI 助手")
+st.title("🏗️ 学术 AI 助手")
 
 # 侧边栏：展示你的开发者身份
 with st.sidebar:
@@ -56,4 +56,5 @@ if user_input:
                     st.error(f"n8n 响应异常，错误码：{response.status_code}")
             except Exception as e:
                 st.error("连接失败！请确认实验室电脑上的 cpolar 窗口是否保持开启。")
+
 
