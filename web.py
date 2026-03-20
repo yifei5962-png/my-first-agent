@@ -3,7 +3,7 @@ import requests
 
 # --- 核心配置：这是你实验室电脑的公网接头地址 ---
 # 确保后缀和你 n8n Webhook 节点里设置的 Path 一致
-N8N_WEBHOOK_URL = "http://eel142d.r2.cpolar.top/webhook/zdu-paper-query"
+N8N_WEBHOOK_URL = "https://eel142d.r2.cpolar.top/webhook/zdu-paper-query"
 
 st.set_page_config(page_title="学术 AI 助手", page_icon="🏗️")
 st.title("🏗️ 学术 AI 助手")
